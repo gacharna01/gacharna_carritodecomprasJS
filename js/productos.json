@@ -1,0 +1,98 @@
+[
+    
+    {
+       "id":"hoodie-01",
+        "titulo": "Hoodie 01",
+        "imagen": "./img/hoodies/HOODIE01.webp",
+        "categoria": {
+           "nombre": "Hoodies",
+           "id": "hoodies"
+        },
+        "precio": 120
+    },
+    {
+       "id":"hoodie-02",
+        "titulo": "Hoodie 02",
+        "imagen": "./img/hoodies/HOODIE02.webp",
+        "categoria": {
+           "nombre": "Hoodies",
+           "id": "hoodies"
+        },
+        "precio": 120
+    },
+    {
+       "id":"hoodie-03",
+        "titulo": "Hoodie 03",
+        "imagen": "./img/hoodies/HOODIE03.webp",
+        "categoria": {
+           "nombre": "Hoodies",
+           "id": "hoodies"
+        },
+        "precio": 120
+    },
+
+
+    {
+        "id":"jogger-01",
+        "titulo": "Jogger 01",
+        "imagen": "./img/joggers/JOGGER01.webp",
+        "categoria": {
+        "nombre": "Joggers",
+        "id": "joggers"
+        },
+        "precio": 120
+    },
+    {
+    "id":"jogger-01",
+        "titulo": "Jogger 02",
+        "imagen": "./img/joggers/JOGGER02.webp",
+        "categoria": {
+        "nombre": "Joggers",
+        "id": "joggers"
+        },
+        "precio": 120
+    },
+    {
+    "id":"jogger-01",
+        "titulo": "Jogger 03",
+        "imagen": "./img/joggers/JOGGER03.webp",
+        "categoria": {
+        "nombre": "Joggers",
+        "id": "joggers"
+        },
+        "precio": 120
+    },
+
+
+    {
+    "id":"oversize-01",
+        "titulo": "Oversize 01",
+        "imagen": "./img/oversizes/OVERSIZE01.webp",
+        "categoria": {
+        "nombre": "Oversizes",
+        "id": "oversizes"
+        },
+        "precio": 100
+    },
+    {
+    "id":"oversize-02",
+        "titulo": "Oversize 02",
+        "imagen": "./img/oversizes/OVERSIZE02.webp",
+        "categoria": {
+        "nombre": "Oversizes",
+        "id": "oversizes"
+        },
+        "precio": 100
+    },
+
+    {
+    "id":"oversize-03",
+        "titulo": "Oversize 03",
+        "imagen": "./img/oversizes/OVERSIZE03.webp",
+        "categoria": {
+        "nombre": "Oversizes",
+        "id": "oversizes"
+        },
+        "precio": 100
+    }
+]

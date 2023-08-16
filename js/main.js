@@ -1,102 +1,11 @@
-//PRODUCTOS
-const productos = [
-    //Hoodies
-    {
-        id:"hoodie-01",
-        titulo: "Hoodie 01",
-        imagen: "./img/hoodies/HOODIE01.webp",
-        categoria: {
-            nombre: "Hoodies",
-            id: "hoodies"
-        },
-        precio: 120
-    },
-    {
-        id:"hoodie-02",
-        titulo: "Hoodie 02",
-        imagen: "./img/hoodies/HOODIE02.webp",
-        categoria: {
-            nombre: "Hoodies",
-            id: "hoodies"
-        },
-        precio: 120
-    },
-    {
-        id:"hoodie-03",
-        titulo: "Hoodie 03",
-        imagen: "./img/hoodies/HOODIE03.webp",
-        categoria: {
-            nombre: "Hoodies",
-            id: "hoodies"
-        },
-        precio: 120
-    },
+let productos = [];
 
-//JOGGERS
-{
-    id:"jogger-01",
-    titulo: "Jogger 01",
-    imagen: "./img/joggers/JOGGER01.webp",
-    categoria: {
-        nombre: "Joggers",
-        id: "joggers"
-    },
-    precio: 120
-},
-{
-    id:"jogger-01",
-    titulo: "Jogger 02",
-    imagen: "./img/joggers/JOGGER02.webp",
-    categoria: {
-        nombre: "Joggers",
-        id: "joggers"
-    },
-    precio: 120
-},
-{
-    id:"jogger-01",
-    titulo: "Jogger 03",
-    imagen: "./img/joggers/JOGGER03.webp",
-    categoria: {
-        nombre: "Joggers",
-        id: "joggers"
-    },
-    precio: 120
-},
-
-//OVERSIZE
-{
-    id:"oversize-01",
-    titulo: "Oversize 01",
-    imagen: "./img/oversizes/OVERSIZE01.webp",
-    categoria: {
-        nombre: "Oversizes",
-        id: "oversizes"
-    },
-    precio: 100
-},
-{
-    id:"oversize-02",
-    titulo: "Oversize 02",
-    imagen: "./img/oversizes/OVERSIZE02.webp",
-    categoria: {
-        nombre: "Oversizes",
-        id: "oversizes"
-    },
-    precio: 100
-},
-
-{
-    id:"oversize-03",
-    titulo: "Oversize 03",
-    imagen: "./img/oversizes/OVERSIZE03.webp",
-    categoria: {
-        nombre: "Oversizes",
-        id: "oversizes"
-    },
-    precio: 100
-},
-];
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
@@ -128,7 +37,7 @@ function cargarProductos(productosElegidos){
     actualizarBotonesAgregar();
 }
 
-cargarProductos(productos);
+
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -171,6 +80,24 @@ if(productosEnCarritoLS) {
 }
 
 function agregarAlCarrito(e) {
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #b4b8b9, #ffffff)",
+          borderRadius: "1.5rem",
+          
+        },
+        offset: {
+            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
